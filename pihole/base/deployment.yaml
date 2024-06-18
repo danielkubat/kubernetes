@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pihole
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pihole
+  template:
+    metadata:
+      labels:
+        app: pihole
+    spec:
+      containers:
+      - env:
+        - name: FTLCONF_LOCAL_IPV4
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        envFrom:
+        - configMapRef:
+            name: pihole-env
+        image: pihole/pihole:2024.06.0
+        name: pihole
+        ports:
+        - containerPort: 80
+          name: http
+        - containerPort: 53
+          name: dns-tcp
+        - containerPort: 53
+          name: dns-udp
+          protocol: UDP
+        resources:
+          limits:
+            cpu: 500m
+            memory: 256Mi
+          requests:
+            cpu: 50m
+            memory: 256Mi
+        volumeMounts:
+        - mountPath: /etc/pihole/
+          name: pihole-persist-data
+      volumes:
+      - name: pihole-persist-data
+        persistentVolumeClaim:
+          claimName: pihole-pvc
