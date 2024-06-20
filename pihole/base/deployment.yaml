@@ -15,7 +15,9 @@ spec:
         app: pihole
     spec:
       containers:
-      - env:
+      - name: pihole
+        image: pihole/pihole:2024.06.0
+        env:
         - name: FTLCONF_LOCAL_IPV4
           valueFrom:
             fieldRef:
@@ -23,8 +25,6 @@ spec:
         envFrom:
         - configMapRef:
             name: pihole-env
-        image: pihole/pihole:2024.06.0
-        name: pihole
         ports:
         - containerPort: 80
           name: http
