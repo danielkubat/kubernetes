@@ -13,10 +13,11 @@ images:
   - name: pihole/pihole
     newTag: 2024.06.0 # https://github.com/pi-hole/docker-pi-hole/releases
 
+generatorOptions:
+  disableNameSuffixHash: true
+
 configMapGenerator:
   - name: pihole-env
-    options:
-      disableNameSuffixHash: true
     literals:
       - TZ=Europe/Prague
       - WEBPASSWORD=admin
