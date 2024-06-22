@@ -37,10 +37,10 @@ spec:
               protocol: UDP
           resources:
             limits:
-              memory: 256Mi
+              memory: "256Mi"
             requests:
-              cpu: 50m
-              memory: 256Mi
+              cpu: "50m"
+              memory: "256Mi"
           volumeMounts:
             - mountPath: /etc/pihole/
               name: pihole-persist-data

@@ -17,16 +17,6 @@ spec:
       containers:
         - name: node-exporter
           image: prom/node-exporter
-          ports:
-            - containerPort: 9100
-              name: http
-              protocol: TCP
-          resources:
-            limits:
-              memory: 100Mi
-            requests:
-              cpu: 50m
-              memory: 100Mi
           args:
             - "--web.listen-address=:9100"
             - "--path.procfs=/host/proc"
@@ -36,6 +26,16 @@ spec:
             - "--no-collector.hwmon"
             - "--collector.filesystem.ignored-mount-points=^/(dev|proc|sys|var/lib/docker/.+|var/lib/kubelet/pods/.+)($|/)"
             - "--collector.netclass.ignored-devices=^(veth.*)$"
+          ports:
+            - containerPort: 9100
+              name: http
+              protocol: TCP
+          resources:
+            limits:
+              memory: "100Mi"
+            requests:
+              cpu: "50m"
+              memory: "100Mi"
           volumeMounts:
             - name: proc
               mountPath: /host/proc
