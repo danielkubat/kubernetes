@@ -22,4 +22,4 @@ configMapGenerator:
       - TZ=Europe/Prague
       - WEBPASSWORD=admin
       - DNSSEC=true
-      - PIHOLE_DNS_=10.43.53.53#53 # clusterIP from unbound service
+      - PIHOLE_DNS_=10.43.53.53#5335 # clusterIP from unbound service
