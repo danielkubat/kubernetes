@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pihole-etc-pv
+spec:
+  claimRef:
+    name: pihole-etc-pvc
+    namespace: pihole
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  local:
+    path: /opt/k8s_data/pihole/etc
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - rd2pi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pihole-config-pv
+spec:
+  claimRef:
+    name: pihole-config-pvc
+    namespace: pihole
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  local:
+    path: /opt/k8s_data/pihole/config
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - rd2pi

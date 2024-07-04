@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: pihole
 
 resources:
-  - base/namespace.yaml
+  - base/namespace.yaml.yaml
   - base/deployment.yaml
   - base/svc.yaml
 

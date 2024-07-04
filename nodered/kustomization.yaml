@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: nodered
+
+resources:
+  - base/namespace.yaml
+  - base/deployment.yaml
+  - base/svc.yaml
+  - base/pvc.yaml
+
+images:
+  - name: nodered/node-red
+    newTag: latest

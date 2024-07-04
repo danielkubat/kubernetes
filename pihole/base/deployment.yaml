@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: pihole
-          image: pihole/pihole
+          image: oijkn/pihole-doh-dot
           env:
             - name: FTLCONF_LOCAL_IPV4
               valueFrom:
@@ -38,16 +38,25 @@ spec:
             - containerPort: 53
               name: dns-udp
               protocol: UDP
+            - containerPort: 443
+              name: https
+              protocol: TCP
           resources:
             limits:
-              memory: "256Mi"
+              cpu: "500m"
+              memory: "512Mi"
             requests:
-              cpu: "50m"
+              cpu: "100m"
               memory: "256Mi"
           volumeMounts:
             - mountPath: /etc/pihole/
-              name: pihole-persist-data
+              name: pihole-etc
+            - mountPath: /config
+              name: pihole-config
       volumes:
-        - name: pihole-persist-data
+        - name: pihole-etc
           persistentVolumeClaim:
-            claimName: pihole-pvc
+            claimName: pihole-etc-pvc
+        - name: pihole-config
+          persistentVolumeClaim:
+            claimName: pihole-config-pvc

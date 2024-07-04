@@ -1,8 +1,21 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pihole-pvc
+  name: pihole-etc-pvc
 spec:
+  volumeName: pihole-etc-pv
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pihole-config-pvc
+spec:
+  volumeName: pihole-config-pv
   accessModes:
     - ReadWriteOnce
   resources:

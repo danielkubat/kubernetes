@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodered
+  labels:
+    app: nodered
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: nodered
+  template:
+    metadata:
+      labels:
+        app: nodered
+    spec:
+      containers:
+        - name: nodered
+          image: nodered/node-red:latest
+          resources:
+            limits:
+              memory: 256Mi
+              cpu: 0.3
+            requests:
+              memory: 128Mi
+              cpu: 0.15
+          ports:
+            - containerPort: 1880
+              name: nodered
+          volumeMounts:
+            - name: nodered-config
+              mountPath: /config
+      volumes:
+        - name: nodered-config
+          persistentVolumeClaim:
+            claimName: nodered-config-pvc
