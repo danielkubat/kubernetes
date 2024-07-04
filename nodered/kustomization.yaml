@@ -8,6 +8,7 @@ resources:
   - base/deployment.yaml
   - base/svc.yaml
   - base/pvc.yaml
+  - base/pv.yaml
 
 images:
   - name: nodered/node-red
