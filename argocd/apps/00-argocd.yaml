@@ -15,3 +15,5 @@ spec:
   syncPolicy:
     automated:
       prune: true
+    syncOptions:
+      - ServerSideApply=true
