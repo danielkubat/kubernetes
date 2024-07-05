@@ -11,7 +11,7 @@ resources:
 
 images:
   - name: pihole/pihole
-    newTag: 2024.06.0 # https://github.com/pi-hole/docker-pi-hole/releases
+    newTag: 2024.07.0 # https://github.com/pi-hole/docker-pi-hole/releases
 
 generatorOptions:
   disableNameSuffixHash: true
