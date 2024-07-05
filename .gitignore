@@ -1,0 +1,5 @@
+# OSX custom attributes
+.DS_Store
+
+# IntelliJ IDEA project specific settings
+.idea
