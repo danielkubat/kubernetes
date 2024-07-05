@@ -4,6 +4,7 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 
 ## Features
 
+- **Argo CD**: Declarative GitOps CD.
 - **Grafana**: Visualization and monitoring tool.
 - **Node Exporter**: Collects hardware and OS metrics.
 - **Pi-hole**: Network-wide ad blocker.
@@ -25,8 +26,8 @@ git clone https://github.com/danielkubat/kubernetes
 cd kubernetes
 ```
 
-2. Apply the configurations:
+2. Apply the Argo CD configuration:
 
 ```bash
-kubectl apply -k <service-config-folder/>
+kubectl apply -k argocd/
 ```
