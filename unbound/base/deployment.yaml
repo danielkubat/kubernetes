@@ -4,7 +4,6 @@ metadata:
   labels:
     app: unbound
   name: unbound
-  namespace: pihole
 spec:
   replicas: 1
   strategy:
