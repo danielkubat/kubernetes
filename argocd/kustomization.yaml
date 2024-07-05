@@ -9,6 +9,8 @@ resources:
 
   # Applications
   - apps/00-argocd.yaml
+  - apps/01-unbound.yaml
+  - apps/02-pihole.yaml
 
 patches:
   - target:
