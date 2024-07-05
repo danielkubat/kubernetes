@@ -11,6 +11,9 @@ resources:
   - apps/00-argocd.yaml
   - apps/01-unbound.yaml
   - apps/02-pihole.yaml
+  - apps/03-grafana.yaml
+  - apps/04-prometheus.yaml
+  - apps/05-node-exporter.yaml
 
 patches:
   - target:
