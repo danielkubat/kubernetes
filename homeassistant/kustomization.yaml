@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: homeassistant
+
+resources:
+  - base/namespace.yaml
+  - base/deployment.yaml
+  - base/svc.yaml
+  - base/pvc.yaml
+  - base/pv.yaml
+
+images:
+  - name: homeassistant/home-assistant
+    newTag: stable

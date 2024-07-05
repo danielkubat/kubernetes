@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homeassistant
+  labels:
+    app: homeassistant
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: homeassistant
+  template:
+    metadata:
+      labels:
+        app: homeassistant
+    spec:
+      containers:
+        - name: homeassistant
+          image: homeassistant/home-assistant
+          resources:
+            limits:
+              memory: 1024Mi
+              cpu: 0.5
+            requests:
+              memory: 512Mi
+              cpu: 0.25
+          ports:
+            - containerPort: 8123
+              name: homeassistant
+          volumeMounts:
+            - name: homeassistant-config
+              mountPath: /config
+      volumes:
+        - name: homeassistant-config
+          persistentVolumeClaim:
+            claimName: homeassistant-config-pvc
