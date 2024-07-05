@@ -29,7 +29,7 @@ spec:
               protocol: UDP
           resources:
             limits:
-              memory: "100Mi"
+              memory: "50Mi"
             requests:
               cpu: "50m"
-              memory: "100Mi"
+              memory: "50Mi"
