@@ -26,8 +26,14 @@ git clone https://github.com/danielkubat/kubernetes
 cd kubernetes
 ```
 
-2. Apply the Argo CD configuration:
+2. Apply the Argo CD:
 
 ```bash
 kubectl apply -k argocd/
+```
+
+3. Apply Argo CD App of Apps:
+
+bash```
+kubectl apply -f argocd/apps/00-argocd.yaml
 ```
