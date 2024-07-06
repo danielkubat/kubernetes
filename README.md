@@ -34,6 +34,6 @@ kubectl apply -k argocd/
 
 3. Apply Argo CD App of Apps:
 
-bash```
+```bash
 kubectl apply -f argocd/apps/00-argocd.yaml
 ```
