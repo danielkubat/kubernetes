@@ -10,6 +10,7 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 - **Pi-hole**: Network-wide ad blocker.
 - **Prometheus**: Monitoring and alerting toolkit.
 - **Unbound**: DNS server.
+- **Chrony**: NTP server.
 
 ## Prerequisites
 
