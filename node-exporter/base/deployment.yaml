@@ -35,10 +35,10 @@ spec:
               protocol: TCP
           resources:
             limits:
-              memory: "100Mi"
+              memory: "25Mi"
             requests:
-              cpu: "50m"
-              memory: "100Mi"
+              cpu: "20m"
+              memory: "25Mi"
           volumeMounts:
             - name: proc
               mountPath: /host/proc

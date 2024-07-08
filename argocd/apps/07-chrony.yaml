@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 07-chrony
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/danielkubat/kubernetes
+    path: chrony
+    targetRevision: main
+  destination:
+    namespace: chrony
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - ServerSideApply=false

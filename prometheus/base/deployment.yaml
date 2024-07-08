@@ -31,10 +31,10 @@ spec:
               protocol: TCP
           resources:
             limits:
-              memory: "200Mi"
+              memory: "100Mi"
             requests:
               cpu: "50m"
-              memory: "200Mi"
+              memory: "100Mi"
           readinessProbe:
             failureThreshold: 3
             httpGet:

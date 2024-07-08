@@ -4,11 +4,10 @@ metadata:
   labels:
     app: unbound
   name: unbound
-  namespace: pihole
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
-    type: Recreate
+    type: RollingUpdate
   revisionHistoryLimit: 0
   selector:
     matchLabels:
@@ -30,7 +29,7 @@ spec:
               protocol: UDP
           resources:
             limits:
-              memory: "100Mi"
+              memory: "50Mi"
             requests:
               cpu: "50m"
-              memory: "100Mi"
+              memory: "50Mi"

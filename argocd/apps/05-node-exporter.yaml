@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 05-node-exporter
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/danielkubat/kubernetes
+    path: node-exporter
+    targetRevision: main
+  destination:
+    namespace: node-exporter
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - ServerSideApply=false
