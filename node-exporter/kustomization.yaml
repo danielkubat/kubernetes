@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: node-exporter
 
 resources:
-  - base/namespace.yaml.yaml
+  - base/namespace.yaml
   - base/deployment.yaml
   - base/svc.yaml
 
