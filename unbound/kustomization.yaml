@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: unbound
 
 resources:
-  - base/namespace.yaml.yaml
+  - base/namespace.yaml
   - base/deployment.yaml
   - base/svc.yaml
   - base/pdb.yaml

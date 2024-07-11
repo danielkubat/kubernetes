@@ -7,7 +7,7 @@ spec:
     name: homeassistant-config-pvc
     namespace: homeassistant
   capacity:
-    storage: 1Gi
+    storage: 10Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
