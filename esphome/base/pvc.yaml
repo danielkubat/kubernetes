@@ -6,7 +6,6 @@ metadata:
   labels:
     app: nodered
 spec:
-  volumeName: nodered-data-pv
   accessModes:
     - ReadWriteOnce
   resources:
