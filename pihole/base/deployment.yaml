@@ -45,9 +45,15 @@ spec:
               cpu: "50m"
               memory: "100Mi"
           volumeMounts:
+            - mountPath: /etc/pihole/whitelist.txt
+              name: pihole-whitelist-configuration
+              subPath: whitelist.txt
             - mountPath: /etc/pihole/
               name: pihole-persist-data
       volumes:
+        - name: pihole-whitelist-configuration
+          configMap:
+            name: pihole-whitelist-configuration
         - name: pihole-persist-data
           persistentVolumeClaim:
             claimName: pihole-pvc

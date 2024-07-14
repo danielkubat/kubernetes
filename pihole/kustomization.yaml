@@ -23,3 +23,6 @@ configMapGenerator:
       - WEBPASSWORD=admin
       - DNSSEC=true
       - PIHOLE_DNS_=10.43.53.53#5335 # clusterIP from unbound service
+  - name: pihole-whitelist-configuration
+    files:
+      - conf/whitelist.txt
