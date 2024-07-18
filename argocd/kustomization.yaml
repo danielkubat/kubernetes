@@ -31,3 +31,8 @@ configMapGenerator:
     literals:
       # Run server without TLS
       - server.insecure=true
+  - name: argocd-cm
+    behavior: merge
+    literals:
+      # Polling a repository interval
+      - timeout.reconciliation=15s
