@@ -14,7 +14,7 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 
 ## Prerequisites
 
-- Raspberry Pi cluster (RPi5)
+- Raspberry Pi (RPi5/8GB RAM)
 - Kubernetes installed on the cluster ([k3s](https://k3s.io))
 - Command line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl))
 
