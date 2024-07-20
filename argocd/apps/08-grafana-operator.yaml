@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 08-grafana-operator
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/danielkubat/kubernetes
+    path: grafana-operator
+    targetRevision: main
+  destination:
+    namespace: grafana-operator
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - ServerSideApply=true
