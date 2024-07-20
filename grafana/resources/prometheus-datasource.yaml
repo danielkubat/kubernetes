@@ -1,0 +1,17 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: prometheus
+spec:
+  datasource:
+    name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus.prometheus.svc:9090
+    isDefault: true
+    editable: false
+    jsonData:
+      timeInterval: 10s
+  instanceSelector:
+    matchLabels:
+      dashboards: grafana

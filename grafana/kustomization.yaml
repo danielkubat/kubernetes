@@ -5,25 +5,5 @@ namespace: grafana
 
 resources:
   - base/namespace.yaml
-  - base/deployment.yaml
-  - base/svc.yaml
-  - base/pvc.yaml
-
-images:
-  - name: grafana/grafana-oss
-    newTag: 11.1.0 # https://github.com/grafana/grafana/releases
-
-generatorOptions:
-  disableNameSuffixHash: true
-
-configMapGenerator:
-  - name: grafana-env
-    literals:
-      - GF_NEWS_NEWS_FEED_ENABLED=false
-      - GF_AUTH_ANONYMOUS_ENABLED=true
-      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
-      - GF_AUTH_BASIC_ENABLED=false
-      - GF_ANALYTICS_REPORTING_ENABLED=false
-  - name: prometheus-datasource
-    files:
-      - conf/prometheus-datasource.yaml
+  - resources/grafana-instance.yaml
+  - resources/prometheus-datasource.yaml

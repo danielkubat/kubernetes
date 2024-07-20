@@ -1,0 +1,36 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: Grafana
+metadata:
+  name: grafana
+  labels:
+    dashboards: "grafana"
+spec:
+  service:
+    spec:
+      type: LoadBalancer
+  config:
+    auth.anonymous:
+      enabled: "true"
+      org_role: "Admin"
+    auth.basic:
+      enabled: "false"
+    analytics:
+      check_for_updates: "false"
+    news:
+      news_feed_enabled: "false"
+  deployment:
+    spec:
+      replicas: 1
+      strategy:
+        type: RollingUpdate
+      revisionHistoryLimit: 0
+      template:
+        spec:
+          containers:
+            - name: grafana
+              image: grafana/grafana:11.1.0
+              securityContext:
+                allowPrivilegeEscalation: true
+                readOnlyRootFilesystem: false
+              readinessProbe:
+                failureThreshold: 3
