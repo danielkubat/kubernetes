@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: grafana-operator
+
+resources:
+  # https://grafana.github.io/grafana-operator/docs/installation/kustomize/
+  - https://github.com/grafana/grafana-operator/releases/download/v5.10.0/kustomize-namespace_scoped.yaml
