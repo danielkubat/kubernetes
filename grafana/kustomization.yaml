@@ -3,6 +3,10 @@ kind: Kustomization
 
 namespace: grafana
 
+images:
+  - name: grafana/grafana
+    newTag: 1.11.0 # https://github.com/grafana/grafana/releases
+
 resources:
   - base/namespace.yaml
   - resources/grafana-instance.yaml
