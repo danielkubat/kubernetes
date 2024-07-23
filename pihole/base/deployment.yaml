@@ -53,6 +53,12 @@ spec:
               name: pihole-etc
             - mountPath: /config
               name: pihole-config
+            - mountPath: /etc/pihole/cloudflare.yml
+              name: pihole-cloudflared-config
+              subPath: cloudflare.yml
+            - mountPath: /etc/pihole/stubby.yml
+              name: pihole-cloudflared-stubby
+              subPath: stubby.yml
       volumes:
         - name: pihole-etc
           persistentVolumeClaim:
@@ -60,3 +66,9 @@ spec:
         - name: pihole-config
           persistentVolumeClaim:
             claimName: pihole-config-pvc
+        - name: pihole-cloudflared-config
+          configMap:
+            name: pihole-cloudflared-config
+        - name: pihole-cloudflared-stubby
+          configMap:
+            name: pihole-cloudflared-stubby

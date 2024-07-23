@@ -27,3 +27,9 @@ configMapGenerator:
     - IPv6=false                                  # For unraid compatibility, strips out all the IPv6 configuration from DNS/Web services when false.
     - DNSMASQ_LISTENING=all                       # local listens on all local subnets, all permits listening on internet origin subnets in addition to local, single listens only on the interface specified.
     - DNSMASQ_USER=root                           # Allows running FTLDNS as non-root.
+  - name: pihole-cloudflared-config
+    files:
+    - config/cloudflare.yml
+  - name: pihole-cloudflared-stubby
+    files:
+    - config/stubby.yml
