@@ -15,7 +15,7 @@ spec:
     auth.basic:
       enabled: "false"
     analytics:
-      check_for_updates: "false"
+      enabled: "false"
     news:
       news_feed_enabled: "false"
     server:
