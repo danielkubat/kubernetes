@@ -18,6 +18,8 @@ spec:
       check_for_updates: "false"
     news:
       news_feed_enabled: "false"
+    server:
+      enable_gzip: "true"
   deployment:
     spec:
       replicas: 1
