@@ -31,8 +31,3 @@ spec:
           containers:
             - name: grafana
               image: grafana/grafana-oss
-              securityContext:
-                allowPrivilegeEscalation: true
-                readOnlyRootFilesystem: false
-              readinessProbe:
-                failureThreshold: 3
