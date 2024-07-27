@@ -5,5 +5,5 @@ metadata:
 spec:
   instanceSelector:
     matchLabels:
-      dashboards: "grafana"
+      instance: "grafana"
   url: "https://grafana.com/api/dashboards/1860/revisions/37/download"
