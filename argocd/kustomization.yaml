@@ -35,4 +35,4 @@ configMapGenerator:
     behavior: merge
     literals:
       # Polling a repository interval
-      - timeout.reconciliation=15s
+      - timeout.reconciliation=600s
