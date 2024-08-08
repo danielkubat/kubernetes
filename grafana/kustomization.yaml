@@ -10,5 +10,5 @@ resources:
   - resources/node-exporter-dashboard.yaml
 
 images:
-  - name: grafana/grafana
+  - name: grafana/grafana-oss
     newTag: 11.1.3 # https://github.com/grafana/grafana/releases
