@@ -4,4 +4,4 @@ updates:
     directories:
       - "**/*"
     schedule:
-      interval: "daily"
+      interval: "monthly"
