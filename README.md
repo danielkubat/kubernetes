@@ -15,26 +15,33 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 
 ## Prerequisites
 
-- Raspberry Pi (RPi5/8GB RAM)
+- Raspberry Pi (ideally RPi5 with 8GB RAM)
 - Kubernetes installed on the cluster ([k3s](https://k3s.io))
 - Command line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl))
+- Git installed on your local machine
 
-## Usage
+## Setup
 
-1. Clone the repository:
+### 1. Clone the Repository
+
+First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/danielkubat/kubernetes
 cd kubernetes
 ```
 
-2. Apply the Argo CD:
+### 2. Install Argo CD
+
+Apply the Argo CD manifests to your cluster:
 
 ```bash
 kubectl apply -k argocd/
 ```
 
-3. Apply Argo CD App of Apps:
+### 3. Deploy Argo CD App of Apps
+
+Apply the Argo CD App of Apps configuration to manage your applications:
 
 ```bash
 kubectl apply -f argocd/apps/00-app-of-apps.yaml
