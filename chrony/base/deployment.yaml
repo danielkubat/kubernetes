@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/name: chrony
+  name: chrony
 spec:
   replicas: 1
   selector:
