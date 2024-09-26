@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chrony
-  namespace: chrony
+  labels:
+    app.kubernetes.io/name: chrony
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: chrony
+      app.kubernetes.io/name: chrony
   template:
     metadata:
       labels:
-        app: chrony
+        app.kubernetes.io/name: chrony
     spec:
       hostNetwork: true
       containers:
-      - name: chrony
-        image: cturra/ntp
-        envFrom:
-          - configMapRef:
-              name: chrony-env
-        ports:
-          - containerPort: 123
-            name: ntp
-            protocol: UDP
-        resources:
-          limits:
-            memory: "100Mi"
-          requests:
-            cpu: "25m"
-            memory: "100Mi"
+        - name: chrony
+          image: cturra/ntp
+          envFrom:
+            - configMapRef:
+                name: chrony-env
+          ports:
+            - containerPort: 123
+              name: ntp
+              protocol: UDP
+          resources:
+            limits:
+              memory: "100Mi"
+            requests:
+              cpu: "25m"
+              memory: "100Mi"

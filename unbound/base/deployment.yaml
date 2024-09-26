@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: unbound
+    app.kubernetes.io/name: unbound
   name: unbound
 spec:
   replicas: 2
@@ -11,11 +11,11 @@ spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: unbound
+      app.kubernetes.io/name: unbound
   template:
     metadata:
       labels:
-        app: unbound
+        app.kubernetes.io/name: unbound
     spec:
       containers:
         - name: unbound

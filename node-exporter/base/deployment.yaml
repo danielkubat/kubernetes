@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: node-exporter
+    app.kubernetes.io/name: node-exporter
   name: node-exporter
 spec:
   replicas: 1
@@ -11,11 +11,11 @@ spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: node-exporter
+      app.kubernetes.io/name: node-exporter
   template:
     metadata:
       labels:
-        app: node-exporter
+        app.kubernetes.io/name: node-exporter
     spec:
       containers:
         - name: node-exporter

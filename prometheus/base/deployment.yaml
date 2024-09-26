@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: prometheus
+    app.kubernetes.io/name: prometheus
   name: prometheus
 spec:
   replicas: 1
@@ -11,11 +11,11 @@ spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: prometheus
+      app.kubernetes.io/name: prometheus
   template:
     metadata:
       labels:
-        app: prometheus
+        app.kubernetes.io/name: prometheus
     spec:
       containers:
         - name: prometheus
