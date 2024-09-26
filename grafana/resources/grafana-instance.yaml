@@ -3,7 +3,7 @@ kind: Grafana
 metadata:
   labels:
     app.kubernetes.io/name: grafana
-    app.kubernetes.io/instance: grafana
+    instance: grafana
   name: grafana
 spec:
   service:

@@ -7,7 +7,7 @@ metadata:
 spec:
   instanceSelector:
     matchLabels:
-      app.kubernetes.io/instance: grafana
+      instance: grafana
   datasource:
     name: Prometheus
     type: prometheus
