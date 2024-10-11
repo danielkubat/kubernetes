@@ -4,20 +4,20 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 
 ## Features
 
-- **Argo CD**: Declarative GitOps CD.
-- **Grafana**: Visualization and monitoring tool.
-- **Grafana Operator**: Grafana resource management.
-- **Node Exporter**: Collects hardware and OS metrics.
-- **Pi-hole**: Network-wide ad blocker.
-- **Prometheus**: Monitoring and alerting toolkit.
-- **Unbound**: DNS server.
-- **Chrony**: NTP server.
+- **Argo CD**: Declarative GitOps CD
+- **Grafana**: Visualization and monitoring tool
+- **Grafana Operator**: Grafana resource management
+- **Node Exporter**: Collects hardware and OS metrics
+- **Pi-hole**: Network-wide ad blocker
+- **Prometheus**: Monitoring and alerting toolkit
+- **Unbound**: DNS server
+- **Chrony**: NTP server
 
 ## Prerequisites
 
-- Raspberry Pi (ideally RPi5 with 8GB RAM)
+- Raspberry Pi (ideally RPi 5 with 8GB RAM)
 - Kubernetes installed on the cluster ([k3s](https://k3s.io))
-- Command line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl))
+- Command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl))
 - Git installed on your local machine
 
 ## Setup
