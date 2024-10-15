@@ -37,3 +37,6 @@ configMapGenerator:
     literals:
       # Polling a repository interval
       - timeout.reconciliation=600s
+      # Allow anonymous access
+      - users.anonymous.enabled=true
+      - policy.default=role:admin
