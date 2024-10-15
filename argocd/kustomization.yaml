@@ -39,4 +39,8 @@ configMapGenerator:
       - timeout.reconciliation=600s
       # Allow anonymous access
       - users.anonymous.enabled=true
+  - name: argocd-rbac-cm
+    behavior: merge
+    literals:
+      # Allow admin access
       - policy.default=role:admin
