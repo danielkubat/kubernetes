@@ -20,7 +20,7 @@ configMapGenerator:
   - name: pihole-env
     literals:
       - TZ=Europe/Prague
-      - WEBPASSWORD=admin
+      - WEBPASSWORD=""
       - DNSSEC=false
       - PIHOLE_DNS_=10.43.53.53#5335 # clusterIP from unbound service
   - name: pihole-whitelist-configuration
