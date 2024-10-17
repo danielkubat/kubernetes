@@ -50,6 +50,7 @@ spec:
               mountPath: /host/root
               readOnly: true
               mountPropagation: HostToContainer
+      hostNetwork: true
       volumes:
         - name: proc
           hostPath:
