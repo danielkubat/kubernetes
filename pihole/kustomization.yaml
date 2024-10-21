@@ -22,7 +22,7 @@ configMapGenerator:
       - TZ=Europe/Prague
       - WEBPASSWORD=""
       - DNSSEC=false
-      - PIHOLE_DNS_=10.43.53.53#5335 # clusterIP from unbound service
+      - PIHOLE_DNS_=10.43.53.53#5335 # clusterIP from knot-resolver service
   - name: pihole-whitelist-configuration
     files:
       - conf/whitelist.txt

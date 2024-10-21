@@ -2,10 +2,10 @@ apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
   labels:
-    app.kubernetes.io/name: unbound
-  name: unbound
+    app.kubernetes.io/name: knot-resolver
+  name: knot-resolver
 spec:
   minAvailable: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: unbound
+      app.kubernetes.io/name: knot-resolver

@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: unbound
-  name: unbound
+    app.kubernetes.io/name: knot-resolver
+  name: knot-resolver
 spec:
   replicas: 2
   strategy:
@@ -11,15 +11,15 @@ spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app.kubernetes.io/name: unbound
+      app.kubernetes.io/name: knot-resolver
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: unbound
+        app.kubernetes.io/name: knot-resolver
     spec:
       containers:
-        - name: unbound
-          image: danielkubat/unbound-rpi
+        - name: knot-resolver
+          image: danielkubat/knot-resolver-rpi
           ports:
             - containerPort: 53
               name: dns-tcp
