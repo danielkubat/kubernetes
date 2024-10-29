@@ -60,3 +60,19 @@ spec:
         - name: root
           hostPath:
             path: /
+      readinessProbe:
+        httpGet:
+          path: /metrics
+          port: 9100
+        initialDelaySeconds: 15
+        periodSeconds: 30
+        timeoutSeconds: 5
+        failureThreshold: 3
+      livenessProbe:
+        httpGet:
+          path: /metrics
+          port: 9100
+        initialDelaySeconds: 15
+        periodSeconds: 30
+        timeoutSeconds: 5
+        failureThreshold: 3

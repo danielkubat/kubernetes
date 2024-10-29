@@ -50,6 +50,22 @@ spec:
               subPath: whitelist.txt
             - mountPath: /etc/pihole/
               name: pihole-persist-data
+          readinessProbe:
+            httpGet:
+              path: /admin/index.php
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /admin/index.php
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
       volumes:
         - name: pihole-whitelist-configuration
           configMap:
