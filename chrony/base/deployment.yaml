@@ -34,17 +34,3 @@ spec:
             requests:
               cpu: "25m"
               memory: "100Mi"
-          readinessProbe:
-            tcpSocket:
-              port: 123
-            initialDelaySeconds: 15
-            periodSeconds: 30
-            timeoutSeconds: 5
-            failureThreshold: 3
-          livenessProbe:
-            tcpSocket:
-              port: 123
-            initialDelaySeconds: 15
-            periodSeconds: 30
-            timeoutSeconds: 5
-            failureThreshold: 3
