@@ -45,11 +45,11 @@ spec:
               cpu: "50m"
               memory: "100Mi"
           volumeMounts:
-            - mountPath: /etc/pihole/whitelist.txt
-              name: pihole-whitelist-configuration
+            - name: pihole-configuration
+              mountPath: /etc/pihole/whitelist.txt
               subPath: whitelist.txt
-            - mountPath: /etc/pihole/
-              name: pihole-persist-data
+            - name: pihole-data
+              mountPath: /etc/pihole
           readinessProbe:
             httpGet:
               path: /admin/index.php
@@ -67,9 +67,9 @@ spec:
             timeoutSeconds: 5
             failureThreshold: 3
       volumes:
-        - name: pihole-whitelist-configuration
+        - name: pihole-configuration
           configMap:
             name: pihole-whitelist-configuration
-        - name: pihole-persist-data
+        - name: pihole-data
           persistentVolumeClaim:
             claimName: pihole-pvc
