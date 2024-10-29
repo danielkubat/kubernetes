@@ -17,6 +17,7 @@ spec:
       labels:
         app.kubernetes.io/name: node-exporter
     spec:
+      hostNetwork: true
       containers:
         - name: node-exporter
           image: prom/node-exporter
