@@ -38,6 +38,22 @@ spec:
             requests:
               cpu: "20m"
               memory: "25Mi"
+          readinessProbe:
+            httpGet:
+              path: /metrics
+              port: 9100
+            initialDelaySeconds: 15
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /metrics
+              port: 9100
+            initialDelaySeconds: 15
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
           volumeMounts:
             - name: proc
               mountPath: /host/proc
@@ -49,7 +65,6 @@ spec:
               mountPath: /host/root
               readOnly: true
               mountPropagation: HostToContainer
-      hostNetwork: true
       volumes:
         - name: proc
           hostPath:
@@ -60,19 +75,3 @@ spec:
         - name: root
           hostPath:
             path: /
-      readinessProbe:
-        httpGet:
-          path: /metrics
-          port: 9100
-        initialDelaySeconds: 15
-        periodSeconds: 30
-        timeoutSeconds: 5
-        failureThreshold: 3
-      livenessProbe:
-        httpGet:
-          path: /metrics
-          port: 9100
-        initialDelaySeconds: 15
-        periodSeconds: 30
-        timeoutSeconds: 5
-        failureThreshold: 3
