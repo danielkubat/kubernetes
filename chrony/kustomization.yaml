@@ -9,7 +9,7 @@ resources:
 
 images:
   - name: cturra/ntp
-    newTag: latest # https://github.com/cturra/docker-ntp
+    newTag: latest  # https://github.com/cturra/docker-ntp
 
 generatorOptions:
   disableNameSuffixHash: true
