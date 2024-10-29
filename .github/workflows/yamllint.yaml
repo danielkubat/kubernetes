@@ -1,0 +1,22 @@
+---
+name: YAMLlint
+
+on:
+  push:
+    paths:
+      - '**.yml'
+      - '**.yaml'
+  workflow_dispatch:
+
+jobs:
+  yamllint:
+    name: YAMLlint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify YAML code
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          strict: true
