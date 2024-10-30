@@ -11,4 +11,4 @@ resources:
 
 images:
   - name: danielkubat/knot-resolver-rpi
-    newTag: 6.0.8  # https://github.com/danielkubat/knot-resolver-rpi/releases
+    digest: sha256:8ea4c1801b6dbedc5df8dbb460be2ef23550aa680a5ca3df4904529a0e175ddc  # https://github.com/danielkubat/knot-resolver-rpi/releases
