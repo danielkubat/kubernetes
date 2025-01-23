@@ -5,4 +5,4 @@ namespace: grafana-operator
 
 resources:
   # https://grafana.github.io/grafana-operator/docs/installation/kustomize/
-  - https://github.com/grafana/grafana-operator/releases/download/v5.15.1/kustomize-cluster_scoped.yaml
+  - https://github.com/grafana/grafana-operator/releases/download/v5.16.0/kustomize-cluster_scoped.yaml
