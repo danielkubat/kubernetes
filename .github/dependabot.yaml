@@ -5,3 +5,9 @@ updates:
       - "**/*"
     schedule:
       interval: "monthly"
+
+  - package-ecosystem: "github-actions"
+    directories:
+      - "/"
+    schedule:
+      interval: "monthly"
