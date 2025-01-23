@@ -46,3 +46,6 @@ Apply the Argo CD App of Apps configuration to manage your applications:
 ```bash
 kubectl apply -f argocd/apps/00-app-of-apps.yaml
 ```
+## License
+
+This project is released under the [Unlicense](LICENSE). See the [LICENSE](LICENSE) file for details.
