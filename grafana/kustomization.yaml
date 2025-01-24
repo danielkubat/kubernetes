@@ -4,7 +4,6 @@ kind: Kustomization
 namespace: grafana
 
 resources:
-  - base/namespace.yaml
   - resources/grafana-instance.yaml
   - resources/prometheus-datasource.yaml
   - resources/node-exporter-dashboard.yaml
