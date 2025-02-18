@@ -20,11 +20,6 @@ spec:
       containers:
         - name: pihole
           image: pihole/pihole
-          env:
-            - name: FTLCONF_LOCAL_IPV4
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.podIP
           envFrom:
             - configMapRef:
                 name: pihole-env
