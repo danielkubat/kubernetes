@@ -52,7 +52,7 @@ spec:
               mountPath: /etc/pihole
           readinessProbe:
             httpGet:
-              path: /admin/index.php
+              path: /admin
               port: 80
             initialDelaySeconds: 30
             periodSeconds: 30
@@ -60,7 +60,7 @@ spec:
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              path: /admin/index.php
+              path: /admin
               port: 80
             initialDelaySeconds: 30
             periodSeconds: 30
