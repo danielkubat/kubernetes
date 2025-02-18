@@ -10,7 +10,7 @@ resources:
 
 images:
   - name: pihole/pihole
-    newTag: 2024.07.0  # https://github.com/pi-hole/docker-pi-hole/releases
+    newTag: 2025.02.0  # https://github.com/pi-hole/docker-pi-hole/releases
 
 generatorOptions:
   disableNameSuffixHash: true
@@ -19,9 +19,9 @@ configMapGenerator:
   - name: pihole-env
     literals:
       - TZ=Europe/Prague
-      - WEBPASSWORD=""
-      - DNSSEC=false
-      - PIHOLE_DNS_=10.43.53.53#5335  # clusterIP from knot-resolver service
+      - FTLCONF_webserver_api_password=""
+      - FTLCONF_dns_dnssec=false
+      - FTLCONF_dns_upstreams=10.43.53.53#5335  # clusterIP from knot-resolver service
   - name: pihole-whitelist-configuration
     files:
       - conf/whitelist.txt
