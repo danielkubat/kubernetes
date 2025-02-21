@@ -5,9 +5,9 @@ metadata:
     app.kubernetes.io/name: knot-resolver
   name: knot-resolver
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
-    type: RollingUpdate
+    type: Recreate
   revisionHistoryLimit: 0
   selector:
     matchLabels:
