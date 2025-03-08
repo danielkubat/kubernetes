@@ -10,4 +10,4 @@ resources:
 
 images:
   - name: gcr.io/cadvisor/cadvisor
-    newTag: v0.49.2  # https://github.com/google/cadvisor/releases
+    newTag: v0.52.1  # https://github.com/google/cadvisor/releases
