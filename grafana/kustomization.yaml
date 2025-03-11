@@ -7,6 +7,7 @@ resources:
   - resources/grafana-instance.yaml
   - resources/prometheus-datasource.yaml
   - resources/node-exporter-dashboard.yaml
+  - resources/ingress.yaml
 
 images:
   - name: grafana/grafana-oss
