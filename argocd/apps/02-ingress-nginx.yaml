@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 10-ingress-nginx
+  name: 02-ingress-nginx
   namespace: argocd
   labels:
     app.kubernetes.io/name: argocd
