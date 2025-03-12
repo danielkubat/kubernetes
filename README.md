@@ -11,7 +11,6 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 - **Prometheus**: Monitoring and alerting toolkit
 - **Knot**: DNS resolver
 - **Chrony**: NTP server
-- **cAdvisor**: Container resource usage and performance analysis
 - **Ingress NGINX**: Kubernetes ingress controller
 
 ## Prerequisites
