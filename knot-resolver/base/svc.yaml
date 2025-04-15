@@ -9,11 +9,12 @@ spec:
     app.kubernetes.io/name: knot-resolver
   ports:
     - name: dns-udp
-      port: 53
+      port: 5335
       protocol: UDP
       targetPort: 53
     - name: dns-tcp
-      port: 53
+      port: 5335
       protocol: TCP
       targetPort: 53
-  type: LoadBalancer
+  type: ClusterIP
+  clusterIP: 10.43.53.53
