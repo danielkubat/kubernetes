@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 09-pihole
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/danielkubat/kubernetes
+    path: pihole
+    targetRevision: main
+  destination:
+    namespace: pihole
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
+    managedNamespaceMetadata:
+      labels:
+        app.kubernetes.io/name: pihole
