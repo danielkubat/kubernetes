@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: pihole
+  name: pihole
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: pihole
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: pihole
+    spec:
+      containers:
+        - name: pihole
+          image: pihole/pihole
+          envFrom:
+            - configMapRef:
+                name: pihole-env
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
+            - containerPort: 53
+              name: dns-tcp
+              protocol: TCP
+            - containerPort: 53
+              name: dns-udp
+              protocol: UDP
+          resources:
+            limits:
+              memory: "300Mi"
+            requests:
+              cpu: "50m"
+              memory: "300Mi"
+          volumeMounts:
+            - name: pihole-configuration
+              mountPath: /etc/pihole/whitelist.txt
+              subPath: whitelist.txt
+            - name: pihole-data
+              mountPath: /etc/pihole
+          readinessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
+      volumes:
+        - name: pihole-configuration
+          configMap:
+            name: pihole-whitelist-configuration
+        - name: pihole-data
+          persistentVolumeClaim:
+            claimName: pihole-pvc
