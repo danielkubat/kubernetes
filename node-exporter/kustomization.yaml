@@ -8,5 +8,6 @@ resources:
   - base/svc.yaml
 
 images:
+  # https://github.com/prometheus/node_exporter/releases
   - name: prom/node-exporter
-    newTag: v1.9.1  # https://github.com/prometheus/node_exporter/releases
+    newTag: v1.9.1

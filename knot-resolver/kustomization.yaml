@@ -9,5 +9,6 @@ resources:
   - base/pdb.yaml
 
 images:
+  # https://github.com/danielkubat/knot-resolver-rpi/releases
   - name: danielkubat/knot-resolver-rpi
-    newTag: 6.0.11-2  # https://github.com/danielkubat/knot-resolver-rpi/releases
+    newTag: 6.0.11-2

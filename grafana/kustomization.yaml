@@ -10,5 +10,6 @@ resources:
   - resources/ingress.yaml
 
 images:
+  # https://github.com/grafana/grafana/releases
   - name: grafana/grafana-oss
-    newTag: 11.6.0  # https://github.com/grafana/grafana/releases
+    newTag: 11.6.0

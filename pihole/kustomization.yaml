@@ -9,8 +9,9 @@ resources:
   - base/pvc.yaml
 
 images:
+  # https://github.com/pi-hole/docker-pi-hole/releases
   - name: pihole/pihole
-    newTag: 2025.04.0  # https://github.com/pi-hole/docker-pi-hole/releases
+    newTag: 2025.04.0
 
 generatorOptions:
   disableNameSuffixHash: true

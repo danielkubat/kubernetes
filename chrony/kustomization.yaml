@@ -7,8 +7,9 @@ resources:
   - base/deployment.yaml
 
 images:
+  # https://github.com/cturra/docker-ntp
   - name: cturra/ntp
-    newTag: latest  # https://github.com/cturra/docker-ntp
+    newTag: latest
 
 generatorOptions:
   disableNameSuffixHash: true
