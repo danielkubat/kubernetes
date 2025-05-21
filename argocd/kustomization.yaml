@@ -30,6 +30,8 @@ configMapGenerator:
     literals:
       # Run server without TLS
       - server.insecure=true
+      # Enable hydrator
+      - hydrator.enabled=true
       # ArgoCD runs behind Ingress NGINX at /argocd path
       - server.rootpath=/argocd
       - server.basehref=/argocd
