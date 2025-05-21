@@ -6,6 +6,9 @@ metadata:
     instance: grafana
   name: grafana
 spec:
+  service:
+    spec:
+      type: LoadBalancer
   config:
     auth:
       disable_login_form: "true"

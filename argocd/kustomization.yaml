@@ -5,7 +5,6 @@ namespace: argocd
 
 resources:
   - base/namespace.yaml
-  - base/ingress.yaml
   # https://argo-cd.readthedocs.io/en/stable/#quick-start
   - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.0/manifests/install.yaml
 
@@ -20,6 +19,9 @@ patches:
         value: 8090
       - op: remove
         path: /spec/ports/1 # https
+      - op: add
+        path: /spec/type
+        value: LoadBalancer
 
 generatorOptions:
   disableNameSuffixHash: true
@@ -32,9 +34,6 @@ configMapGenerator:
       - server.insecure=true
       # Enable hydrator
       - hydrator.enabled=true
-      # ArgoCD runs behind Ingress NGINX at /argocd path
-      - server.rootpath=/argocd
-      - server.basehref=/argocd
   - name: argocd-cm
     behavior: merge
     literals:
