@@ -6,7 +6,7 @@ namespace: argocd
 resources:
   - base/namespace.yaml
   # https://argo-cd.readthedocs.io/en/stable/#quick-start
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.0/manifests/install.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.3/manifests/install.yaml
 
 patches:
   - target:
@@ -32,8 +32,6 @@ configMapGenerator:
     literals:
       # Run server without TLS
       - server.insecure=true
-      # Enable hydrator
-      - hydrator.enabled=true
   - name: argocd-cm
     behavior: merge
     literals:
