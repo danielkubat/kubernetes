@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 09-pihole
+  name: 02-pihole
   namespace: argocd
   labels:
     app.kubernetes.io/name: argocd
