@@ -35,10 +35,10 @@ spec:
               protocol: UDP
           resources:
             limits:
-              memory: "300Mi"
+              memory: "150Mi"
             requests:
               cpu: "50m"
-              memory: "300Mi"
+              memory: "150Mi"
           volumeMounts:
             - name: pihole-configuration
               mountPath: /etc/pihole/whitelist.txt
