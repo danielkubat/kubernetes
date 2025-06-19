@@ -30,7 +30,7 @@ spec:
               protocol: UDP
           resources:
             limits:
-              memory: "100Mi"
+              memory: "50Mi"
             requests:
-              cpu: "25m"
-              memory: "100Mi"
+              cpu: "10m"
+              memory: "50Mi"
