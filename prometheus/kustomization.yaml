@@ -11,7 +11,7 @@ resources:
 images:
   # https://github.com/prometheus/prometheus/releases
   - name: prom/prometheus
-    newTag: v3.2.1
+    newTag: v3.4.1
 
 generatorOptions:
   disableNameSuffixHash: true
