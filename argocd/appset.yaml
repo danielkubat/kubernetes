@@ -9,8 +9,8 @@ spec:
         repoURL: https://github.com/danielkubat/kubernetes
         revision: main
         directories:
-          - path: kubernetes/*
-          - path: kubernetes/.github
+          - path: "*"
+          - path: .github
             exclude: true
   template:
     metadata:
