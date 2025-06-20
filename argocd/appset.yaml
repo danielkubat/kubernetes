@@ -5,28 +5,28 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - git:
-      repoURL: https://github.com/danielkubat/kubernetes
-      revision: main
-      directories:
-      - path: kubernetes/*
-      - path: kubernetes/.github
-        exclude: true
+    - git:
+        repoURL: https://github.com/danielkubat/kubernetes
+        revision: main
+        directories:
+          - path: kubernetes/*
+          - path: kubernetes/.github
+            exclude: true
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: "{{path.basename}}"
       namespace: argocd
       labels:
-        app.kubernetes.io/name: '{{path.basename}}'
+        app.kubernetes.io/name: "{{path.basename}}"
     spec:
       project: default
       source:
         repoURL: https://github.com/danielkubat/kubernetes
         targetRevision: main
-        path: '{{path}}'
+        path: "{{path}}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{path.basename}}'
+        namespace: "{{path.basename}}"
       syncPolicy:
         automated:
           prune: true
