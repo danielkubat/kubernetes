@@ -44,7 +44,7 @@ kubectl apply -k argocd/
 Apply the Argo CD ApplicationSet configuration to manage your applications:
 
 ```bash
-kubectl apply -f argocd/apps/00-appset.yaml
+kubectl apply -f argocd/appset.yaml
 ```
 ## License
 
