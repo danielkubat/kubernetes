@@ -28,6 +28,7 @@ spec:
             - "--path.rootfs=/host/root"
             - "--collector.filesystem.mount-points-exclude=^/(dev|proc|sys|var/lib/docker/.+|var/lib/kubelet/pods/.+)($|/)"
             - "--collector.netclass.ignored-devices=^(veth.*)$"
+            - "--log.level=debug"
           ports:
             - containerPort: 9100
               name: http
