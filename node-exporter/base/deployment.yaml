@@ -26,9 +26,21 @@ spec:
             - "--path.procfs=/host/proc"
             - "--path.sysfs=/host/sys"
             - "--path.rootfs=/host/root"
+            - "--collector.disable-defaults"
+            - "--collector.cpu"
+            - "--collector.meminfo"
+            - "--collector.filesystem"
+            - "--collector.diskstats"
+            - "--collector.netdev"
+            - "--collector.netstat"
+            - "--collector.time"
+            - "--collector.uname"
+            - "--collector.loadavg"
+            - "--collector.stat"
+            - "--collector.vmstat"
+            - "--collector.processes"
             - "--collector.filesystem.mount-points-exclude=^/(dev|proc|sys|var/lib/docker/.+|var/lib/kubelet/pods/.+)($|/)"
             - "--collector.netclass.ignored-devices=^(veth.*)$"
-            - "--log.level=debug"
           ports:
             - containerPort: 9100
               name: http
