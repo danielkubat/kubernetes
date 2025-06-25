@@ -34,10 +34,10 @@ spec:
               protocol: TCP
           resources:
             limits:
-              memory: "25Mi"
+              memory: "128Mi"
             requests:
               cpu: "20m"
-              memory: "25Mi"
+              memory: "64Mi"
           readinessProbe:
             httpGet:
               path: /metrics
