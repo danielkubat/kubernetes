@@ -7,6 +7,7 @@ resources:
   - app.yaml
   - appset.yaml
   - base/namespace.yaml
+  - base/project.yaml
   # https://argo-cd.readthedocs.io/en/stable/#quick-start
   - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.6/manifests/install.yaml
 
