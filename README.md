@@ -38,14 +38,6 @@ Apply the Argo CD manifests to your cluster:
 ```bash
 kubectl apply -k argocd/
 ```
-
-### 3. Deploy Argo CD ApplicationSet
-
-Apply the Argo CD ApplicationSet configuration to manage your applications:
-
-```bash
-kubectl apply -f argocd/appset.yaml
-```
 ## License
 
 This project is released under the [Unlicense](LICENSE). See the [LICENSE](LICENSE) file for details.

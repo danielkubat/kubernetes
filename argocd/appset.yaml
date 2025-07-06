@@ -12,6 +12,8 @@ spec:
           - path: "*"
           - path: .github
             exclude: true
+          - path: argocd
+            exclude: true
   template:
     metadata:
       name: "{{path.basename}}"
