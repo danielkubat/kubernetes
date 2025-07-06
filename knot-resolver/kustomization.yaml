@@ -4,9 +4,9 @@ kind: Kustomization
 namespace: knot-resolver
 
 resources:
-  - base/deployment.yaml
-  - base/svc.yaml
-  - base/pdb.yaml
+  - deployment.yaml
+  - svc.yaml
+  - pdb.yaml
 
 images:
   # https://github.com/danielkubat/knot-resolver-rpi/releases

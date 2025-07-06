@@ -4,8 +4,8 @@ kind: Kustomization
 namespace: node-exporter
 
 resources:
-  - base/daemonset.yaml
-  - base/svc.yaml
+  - daemonset.yaml
+  - svc.yaml
 
 images:
   # https://github.com/prometheus/node_exporter/releases

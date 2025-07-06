@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: chrony
 
 resources:
-  - base/deployment.yaml
+  - deployment.yaml
 
 images:
   # https://github.com/cturra/docker-ntp

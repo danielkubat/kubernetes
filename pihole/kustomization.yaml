@@ -4,9 +4,9 @@ kind: Kustomization
 namespace: pihole
 
 resources:
-  - base/deployment.yaml
-  - base/svc.yaml
-  - base/pvc.yaml
+  - deployment.yaml
+  - svc.yaml
+  - pvc.yaml
 
 images:
   # https://github.com/pi-hole/docker-pi-hole/releases

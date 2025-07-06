@@ -4,10 +4,10 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-  - app.yaml
-  - appset.yaml
-  - base/namespace.yaml
-  - base/project.yaml
+  - resources/app.yaml
+  - resources/appset.yaml
+  - resources/project.yaml
+  - namespace.yaml
   # https://argo-cd.readthedocs.io/en/stable/#quick-start
   - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.6/manifests/install.yaml
 
