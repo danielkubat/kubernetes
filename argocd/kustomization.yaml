@@ -6,7 +6,7 @@ namespace: argocd
 resources:
   - base/namespace.yaml
   # https://argo-cd.readthedocs.io/en/stable/#quick-start
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.3/manifests/install.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.6/manifests/install.yaml
 
 patches:
   - target:
