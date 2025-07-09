@@ -36,7 +36,7 @@ spec:
         managedNamespaceMetadata:
           annotations:
             argocd.argoproj.io/tracking-id: >-
-              {{path.basename}}:/Namespace:{{path.basename}}
+              {{path.basename}}:/Namespace:{{path.basename}}/{{path.basename}}
         syncOptions:
           - CreateNamespace=true
           - ServerSideApply=true
