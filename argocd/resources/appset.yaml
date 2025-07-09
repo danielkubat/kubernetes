@@ -33,6 +33,10 @@ spec:
         automated:
           prune: true
           selfHeal: true
+        managedNamespaceMetadata:
+          annotations:
+            argocd.argoproj.io/tracking-id: >-
+              {{path.basename}}:/Namespace:{{path.basename}}
         syncOptions:
           - CreateNamespace=true
           - ServerSideApply=true
