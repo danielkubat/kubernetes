@@ -4,10 +4,10 @@ updates:
     directories:
       - "**/*"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
 
   - package-ecosystem: "github-actions"
     directories:
       - "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
