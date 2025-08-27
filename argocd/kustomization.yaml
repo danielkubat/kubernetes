@@ -9,7 +9,7 @@ resources:
   - resources/project.yaml
   - namespace.yaml
   # https://argo-cd.readthedocs.io/en/stable/#quick-start
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v3.0.11/manifests/install.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v3.1.1/manifests/install.yaml
 
 patches:
   - target:
