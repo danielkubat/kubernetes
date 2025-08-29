@@ -42,6 +42,8 @@ configMapGenerator:
       - timeout.reconciliation=600s
       # Allow anonymous access
       - users.anonymous.enabled=true
+      # Enable Helm rendering
+      - kustomize.buildOptions=--enable-helm
   - name: argocd-rbac-cm
     behavior: merge
     literals:
