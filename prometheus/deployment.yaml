@@ -22,6 +22,8 @@ spec:
           image: prom/prometheus
           args:
             - "--config.file=/etc/prometheus/prometheus.yaml"
+            - "--web.enable-lifecycle"
+            - "--web.route-prefix=/prometheus"
             - "--storage.tsdb.path=/prometheus"
             - "--storage.tsdb.retention.time=180d"
             - "--storage.tsdb.retention.size=5GB"
@@ -38,7 +40,7 @@ spec:
           readinessProbe:
             failureThreshold: 3
             httpGet:
-              path: /-/ready
+              path: /prometheus/-/ready
               port: 9090
               scheme: HTTP
             initialDelaySeconds: 30
@@ -48,7 +50,7 @@ spec:
           livenessProbe:
             failureThreshold: 3
             httpGet:
-              path: /-/healthy
+              path: /prometheus/-/healthy
               port: 9090
               scheme: HTTP
             initialDelaySeconds: 30
