@@ -9,7 +9,7 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 - **Grafana Operator**: Grafana resource management
 - **Node Exporter**: Collects hardware and OS metrics
 - **Pi-hole**: Network-wide ad blocker
-- **Prometheus**: Monitoring and alerting toolkit (/prometheus)
+- **Prometheus**: Monitoring and alerting toolkit (`/prometheus`)
 - **Knot**: DNS resolver
 - **Chrony**: NTP server
 - **Istio**: Service mesh
