@@ -12,7 +12,7 @@ spec:
     name: Prometheus
     type: prometheus
     access: proxy
-    url: http://prometheus.prometheus.svc:9090
+    url: http://prometheus.prometheus.svc.cluster.local:9090/prometheus
     isDefault: true
     editable: false
     jsonData:
