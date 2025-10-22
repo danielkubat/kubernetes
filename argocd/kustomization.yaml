@@ -35,6 +35,9 @@ configMapGenerator:
     literals:
       # Run server without TLS
       - server.insecure=true
+      # Set base and root path
+      - server.basehref=/argocd
+      - server.rootpath=/argocd
   - name: argocd-cm
     behavior: merge
     literals:
