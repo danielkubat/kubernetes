@@ -1,6 +1,8 @@
 apiVersion: networking.istio.io/v1
 kind: VirtualService
 metadata:
+  labels:
+    app.kubernetes.io/name: argocd
   name: argocd-server
 spec:
   hosts:
