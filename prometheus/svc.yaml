@@ -1,8 +1,9 @@
 apiVersion: networking.istio.io/v1
 kind: VirtualService
 metadata:
+  labels:
+    app.kubernetes.io/name: prometheus
   name: prometheus
-  namespace: prometheus
 spec:
   hosts:
     - "*"
@@ -14,7 +15,7 @@ spec:
             prefix: "/prometheus"
       route:
         - destination:
-            host: prometheus.prometheus.svc.cluster.local
+            host: prometheus
             port:
               number: 9090
 ---
