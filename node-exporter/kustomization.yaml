@@ -10,4 +10,4 @@ resources:
 images:
   # https://github.com/prometheus/node_exporter/releases
   - name: prom/node-exporter
-    newTag: v1.9.1
+    newTag: v1.10.2
