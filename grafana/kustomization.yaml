@@ -7,9 +7,9 @@ resources:
   - resources/grafana-instance.yaml
   - resources/prometheus-datasource.yaml
   - resources/node-exporter-dashboard.yaml
+  - svc.yaml
 
 images:
-  - svc.yaml
   # https://github.com/grafana/grafana/releases
   - name: grafana/grafana-oss
     newTag: 12.4.0
