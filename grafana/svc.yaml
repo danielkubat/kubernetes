@@ -18,4 +18,3 @@ spec:
             host: grafana-service
             port:
               number: 3000
-  
