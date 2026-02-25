@@ -5,7 +5,7 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 ## Features
 
 - **Argo CD**: Declarative GitOps CD (`/argocd`)
-- **Grafana**: Visualization and monitoring tool
+- **Grafana**: Visualization and monitoring tool (`/grafana`)
 - **Grafana Operator**: Grafana resource management
 - **Node Exporter**: Collects hardware and OS metrics
 - **Pi-hole**: Network-wide ad blocker
