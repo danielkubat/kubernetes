@@ -36,7 +36,7 @@ spec:
               memory: "64Mi"
           readinessProbe:
             httpGet:
-              path: /metrics
+              path: /
               port: 9100
             initialDelaySeconds: 15
             periodSeconds: 30
@@ -44,7 +44,7 @@ spec:
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              path: /metrics
+              path: /
               port: 9100
             initialDelaySeconds: 15
             periodSeconds: 30
