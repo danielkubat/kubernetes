@@ -22,7 +22,7 @@ configMapGenerator:
       - TZ=Europe/Prague
       - FTLCONF_webserver_api_password=""
       - FTLCONF_dns_dnssec=false
-      - FTLCONF_dns_upstreams=10.43.53.53#5335  # knot-resolver clusterIP
+      - FTLCONF_dns_upstreams=knot-resolver.knot-resolver.svc.cluster.local#5335  # knot-resolver ClusterIP service
   - name: pihole-whitelist-configuration
     files:
       - conf/whitelist.txt

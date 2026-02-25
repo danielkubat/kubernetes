@@ -17,4 +17,3 @@ spec:
       protocol: TCP
       targetPort: 53
   type: ClusterIP
-  clusterIP: 10.43.53.53
