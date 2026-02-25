@@ -9,6 +9,7 @@ resources:
   - resources/node-exporter-dashboard.yaml
 
 images:
+  - svc.yaml
   # https://github.com/grafana/grafana/releases
   - name: grafana/grafana-oss
     newTag: 12.4.0
