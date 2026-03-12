@@ -34,12 +34,8 @@ spec:
             - name: grafana
               image: grafana/grafana-oss
               env:
-                - name: HOST_IP
-                  valueFrom:
-                    fieldRef:
-                      fieldPath: status.hostIP
                 - name: GF_SERVER_ROOT_URL
-                  value: "http://$(HOST_IP)/grafana"
+                  value: "http://grafana-service.grafana.svc.cluster.local:3000/grafana"
               resources:
                 limits:
                   memory: "256Mi"
