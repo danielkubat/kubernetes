@@ -9,3 +9,4 @@ helmCharts:
     version: 2.23.0
     releaseName: kiali-server
     namespace: istio-system
+    valuesFile: helm/values.yaml
