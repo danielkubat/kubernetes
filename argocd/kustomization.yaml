@@ -23,9 +23,6 @@ patches:
         value: 8090
       - op: remove
         path: /spec/ports/1 # https
-      - op: add
-        path: /spec/type
-        value: LoadBalancer
 
 generatorOptions:
   disableNameSuffixHash: true
