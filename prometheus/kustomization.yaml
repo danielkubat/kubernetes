@@ -7,6 +7,7 @@ resources:
   - deployment.yaml
   - svc.yaml
   - pvc.yaml
+  - namespace.yaml
 
 images:
   # https://github.com/prometheus/prometheus/releases
