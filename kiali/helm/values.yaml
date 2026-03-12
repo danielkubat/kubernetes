@@ -1,2 +1,6 @@
 auth:
   strategy: anonymous
+
+external_services:
+  prometheus:
+    url: "http://prometheus.prometheus.svc.cluster.local:9090"
