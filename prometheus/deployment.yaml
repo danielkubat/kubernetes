@@ -17,6 +17,7 @@ spec:
       labels:
         app.kubernetes.io/name: prometheus
     spec:
+      serviceAccountName: prometheus
       containers:
         - name: prometheus
           image: prom/prometheus
