@@ -8,6 +8,7 @@ resources:
   - svc.yaml
   - pvc.yaml
   - namespace.yaml
+  - rbac.yaml
 
 images:
   # https://github.com/prometheus/prometheus/releases
