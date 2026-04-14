@@ -13,4 +13,4 @@ resources:
 images:
   # https://github.com/grafana/grafana/releases
   - name: grafana/grafana-oss
-    newTag: 12.4.0
+    newTag: 12.4.3
