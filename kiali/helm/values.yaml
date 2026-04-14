@@ -6,3 +6,6 @@ external_services:
     url: "http://prometheus.prometheus.svc.cluster.local:9090/prometheus"
   grafana:
     internal_url: "http://grafana-service.grafana.svc.cluster.local:3000/grafana"
+
+server:
+  web_root: /kiali
