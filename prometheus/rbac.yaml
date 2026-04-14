@@ -9,18 +9,18 @@ kind: ClusterRole
 metadata:
   name: prometheus-monitor-role
 rules:
-- apiGroups: [""]
-  resources: ["pods", "services", "endpoints"]
-  verbs: ["get", "list", "watch"]
+  - apiGroups: [""]
+    resources: ["pods", "services", "endpoints"]
+    verbs: ["get", "list", "watch"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: prometheus-monitor-binding
 subjects:
-- kind: ServiceAccount
-  name: prometheus
-  namespace: prometheus
+  - kind: ServiceAccount
+    name: prometheus
+    namespace: prometheus
 roleRef:
   kind: ClusterRole
   name: prometheus-monitor-role
