@@ -13,6 +13,7 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 - **Knot**: DNS resolver
 - **Chrony**: NTP server
 - **Istio**: Service mesh
+- **Kiali**: Observability for Istio service mesh (`/kiali`)
 
 ## Prerequisites
 
