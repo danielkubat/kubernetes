@@ -29,11 +29,6 @@ spec:
         type: RollingUpdate
       revisionHistoryLimit: 0
       template:
-        metadata:
-          annotations:
-            prometheus.io/scrape: "true"
-            prometheus.io/port: "15020"
-            prometheus.io/path: "/stats/prometheus"
         spec:
           containers:
             - name: grafana
