@@ -4,21 +4,12 @@ kind: Kustomization
 namespace: prometheus
 
 resources:
-  - deployment.yaml
+  - resources/prometheus.yaml
   - svc.yaml
-  - pvc.yaml
   - namespace.yaml
   - rbac.yaml
 
 images:
   # https://github.com/prometheus/prometheus/releases
   - name: prom/prometheus
-    newTag: v3.9.1
-
-generatorOptions:
-  disableNameSuffixHash: true
-
-configMapGenerator:
-  - name: prometheus-configuration
-    files:
-      - conf/prometheus.yaml
+    newTag: v3.11.2
