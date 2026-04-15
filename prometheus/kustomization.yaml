@@ -5,6 +5,7 @@ namespace: prometheus
 
 resources:
   - resources/prometheus.yaml
+  - resources/envoy-podmonitor.yaml
   - svc.yaml
   - namespace.yaml
   - rbac.yaml
