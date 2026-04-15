@@ -10,6 +10,7 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 - **Node Exporter**: Collects hardware and OS metrics
 - **Pi-hole**: Network-wide ad blocker
 - **Prometheus**: Monitoring and alerting toolkit (`/prometheus`)
+- **Prometheus Operator**: Prometheus resource management
 - **Knot**: DNS resolver
 - **Chrony**: NTP server
 - **Istio**: Service mesh
