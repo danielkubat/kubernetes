@@ -43,7 +43,7 @@ spec:
                   value: "http://grafana-service.grafana.svc.cluster.local:3000/grafana"
               resources:
                 limits:
-                  memory: "512Mi"
+                  memory: "1Gi"
                 requests:
                   cpu: "100m"
-                  memory: "512Mi"
+                  memory: "1Gi"
