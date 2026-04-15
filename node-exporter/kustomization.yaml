@@ -6,6 +6,7 @@ namespace: node-exporter
 resources:
   - daemonset.yaml
   - svc.yaml
+  - node-exporter-servicemonitor.yaml
 
 images:
   # https://github.com/prometheus/node_exporter/releases
