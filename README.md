@@ -11,7 +11,6 @@ Welcome to the Kubernetes on Raspberry Pi repository! This collection of Kuberne
 - **Pi-hole**: Network-wide ad blocker
 - **Prometheus**: Monitoring and alerting toolkit (`/prometheus`)
 - **Prometheus Operator**: Prometheus resource management
-- **Knot**: DNS resolver
 - **Chrony**: NTP server
 - **Istio**: Service mesh
 - **Kiali**: Observability for Istio service mesh (`/kiali`)
