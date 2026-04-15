@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: envoy-stats
+  namespace: prometheus
+spec:
+  selector:
+    matchLabels:
+      security.istio.io/tlsMode: istio
+  namespaceSelector:
+    any: true
+  podMetricsEndpoints:
+    - interval: 15s
+      path: /stats/prometheus
+      port: http-envoy-prom
