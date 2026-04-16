@@ -35,7 +35,7 @@ spec:
               image: grafana/grafana-oss
               env:
                 - name: GF_SERVER_ROOT_URL
-                  value: "http://grafana-service.grafana.svc.cluster.local:3000/grafana"
+                  value: "http://localhost:3000/grafana"
               resources:
                 limits:
                   memory: "1Gi"
