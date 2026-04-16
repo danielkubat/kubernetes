@@ -5,6 +5,7 @@ namespace: istio-system
 
 resources:
   - svc.yaml
+  - envoy-podmonitor.yaml
 
 helmCharts:
   - name: kiali-server
