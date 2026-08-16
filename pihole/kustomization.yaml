@@ -21,6 +21,7 @@ configMapGenerator:
     literals:
       - TZ=Europe/Prague
       - FTLCONF_webserver_api_password=""
+      - FTLCONF_dns_dnssec=true
   - name: pihole-whitelist-configuration
     files:
       - conf/whitelist.txt
