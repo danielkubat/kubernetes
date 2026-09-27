@@ -8,8 +8,3 @@ resources:
   - svc.yaml
   - namespace.yaml
   - rbac.yaml
-
-images:
-  # https://github.com/prometheus/prometheus/releases
-  - name: prom/prometheus
-    newTag: v3.11.2
