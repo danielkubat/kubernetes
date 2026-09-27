@@ -9,7 +9,7 @@ resources:
 images:
   # https://github.com/dockur/chrony
   - name: dockurr/chrony
-    newTag: 4
+    newTag: "4"
 
 generatorOptions:
   disableNameSuffixHash: true
