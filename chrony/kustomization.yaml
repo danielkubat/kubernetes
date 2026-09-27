@@ -19,5 +19,4 @@ configMapGenerator:
     literals:
       - NTP_SERVERS="217.31.202.100,195.113.144.201,195.113.144.238,147.229.9.10,193.0.0.229"
       - LOG_LEVEL=3
-      - NOCLIENTLOG=true
       - TZ=Europe/Prague
