@@ -20,7 +20,7 @@ spec:
       hostNetwork: true
       containers:
         - name: chrony
-          image: cturra/ntp
+          image: dockurr/chrony
           envFrom:
             - configMapRef:
                 name: chrony-env
